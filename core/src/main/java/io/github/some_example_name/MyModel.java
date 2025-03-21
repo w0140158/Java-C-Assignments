@@ -13,7 +13,7 @@ public abstract class MyModel {
     public Model model;
     protected ModelInstance instance;
 
-    // Constructor sets the initial position/rotation.
+    // Constructor setting initial rotation and position
     public MyModel(float x, float y, float z, float rotX, float rotY, float rotZ) {
         this.position = new Vector3(x, y, z);
         this.rotation = new Vector3(rotX, rotY, rotZ);
@@ -25,7 +25,7 @@ public abstract class MyModel {
     // Abstract method to load 3D model
     public abstract void createModel(String modelPath);
 
-    // Returns the ModelInstance
+    // Model Instance return
     public ModelInstance getInstance() {
         if (instance != null) {
             instance.transform.idt();
